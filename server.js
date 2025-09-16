@@ -1,13 +1,11 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const cors = require('cors');
-const dotenv = require('dotenv');
+const cors = require("cors");
+const dotenv = require("dotenv");
 dotenv.config();
-const connectDB = require('./config/connectDB');
+const connectDB = require("./config/connectDB");
 const authRoutes = require("./routes/auth");
-const postRoutes = require("./routes/postRoute");   // Add your post routes
-
-
+const postRoutes = require("./routes/postRoute"); // Add your post routes
 
 app.use(cors());
 app.use(express.json());
