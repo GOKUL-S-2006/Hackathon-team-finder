@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-  user: { type: String, required: true },          // User name or ID
+  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },           // User name or ID
   image: { type: String },                          // URL or path to image
   description: { type: String },                    // Description of the post
   title: { type: String, required: true },         // Title of the post
